@@ -1,51 +1,137 @@
-# Develop and Deploy A Customer Churn Prediction Model using Python, Streamlit and Docker
+# Customer Churn Prediction App
 
+A machine learning and Streamlit web application that predicts whether a customer is likely to churn based on their account and service details.
 
+## Overview
 
-[![Docker Extension for RedisInsight](http://img.youtube.com/vi/RhRIFjyzIqU/hqdefault.jpg)](https://www.youtube.com/embed/RhRIFjyzIqU)
+Customer churn is a major problem for businesses because losing customers affects growth and revenue. This project uses a machine learning model to estimate churn risk and provides a simple web interface for real time prediction.
 
+This is my personal version of the project, customized and maintained by Tanya Chugh.
 
+## Problem Statement
 
+The goal of this project is to predict whether a customer will leave a service based on features such as contract type, tenure, monthly charges, and service usage. Businesses can use churn predictions to identify at-risk customers and improve retention strategies.
 
-## Prerequisite:
+## Dataset
 
-- An IDE/ Text Editor 
-- Python 3.6+ 
-- PIP (or Anaconda)
-- Not required but recommended: An environment management tool such as pipenv, venv, virtualend, conda.
-- Docker Desktop
+This project uses the **Telco Customer Churn** dataset.
 
-## Installing the dependencies
+- Target column: `Churn`
+- Type of problem: Binary classification
+- Input features include customer demographics, account information, internet service details, billing details, and contract type
 
+## Features
+
+- Predicts customer churn in real time.
+- Simple and interactive Streamlit interface.
+- Uses a trained machine learning model.
+- Helps identify customers at risk of leaving.
+- Easy to run locally and deploy online.
+
+## Tech Stack
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Streamlit
+- Joblib
+- Matplotlib / Seaborn
+- Docker
+
+## Project Structure
+
+```text
+customer-churnapp/
+├── data/
+├── model/
+├── notebooks/
+├── streamapp.py
+├── train.py
+├── requirements.txt
+├── Pipfile
+├── Dockerfile
+└── README.md
 ```
-pip3 install -r Pipfile
+
+## How It Works
+
+1. The dataset is cleaned and preprocessed.
+2. Categorical values are encoded.
+3. A classification model is trained on churn data.
+4. The trained model is saved.
+5. Streamlit collects user input.
+6. The app predicts whether a customer is likely to churn.
+
+## How to Run Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/customer-churnapp.git
+cd customer-churnapp
 ```
 
-## Executing the Script
+### 2. Install dependencies
 
+If you are using `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
 ```
- python3 stream_app.py
+
+If you are using `Pipfile`:
+
+```bash
+pipenv install
+pipenv shell
 ```
 
-## Viewing Your Streamlit App
+### 3. Run the app
 
+```bash
+streamlit run streamapp.py
 ```
-You can now view your Streamlit app in your browser.
 
-  Local URL: http://localhost:8501
-  Network URL: http://192.168.1.23:8501
- ```
+## Deployment
 
+After deploying the app, add your live link here:
 
+**Live App:** https://your-app-link-here
 
-<img width="769" alt="image" src="https://user-images.githubusercontent.com/313480/182178628-56770a72-d8fd-4fe8-9d7d-e2cc7b59d731.png">
+## Model Evaluation
 
+Model performance can be added here after training.
 
-## Blog Post
+Example:
+- Accuracy: XX%
+- Precision: XX%
+- Recall: XX%
+- F1 Score: XX%
+- ROC-AUC: XX%
 
-- https://www.docker.com/blog/how-to-develop-and-deploy-a-customer-churn-prediction-model-using-python-streamlit-and-docker/
+## Future Improvements
 
-## Videos
+- Try multiple models and compare performance.
+- Add feature importance visualization.
+- Improve the UI design.
+- Add explanation for each prediction.
+- Deploy with better monitoring.
 
-- https://www.youtube.com/watch?v=RhRIFjyzIqU&t=34s
+## What I Learned
 
+- Data cleaning and preprocessing.
+- Handling categorical data.
+- Building a classification model.
+- Creating a real-time ML app with Streamlit.
+- Deploying a project using GitHub and Docker.
+
+## Author
+
+**Tanya Chugh**
+
+## Acknowledgements
+
+- Telco Customer Churn dataset.
+- Streamlit documentation.
+- Scikit-learn documentation.
